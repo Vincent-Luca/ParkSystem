@@ -12,6 +12,10 @@ namespace ParkSystem.Klassen
     {
         public int Nr;
         public bool belegt = false;
-        public DateTime beleget_seit;
+        public TimeSpan beleget_seit;
+        public Parkplatz(int Nr)
+        {
+            this.Nr = Nr;
+        }
     }
 }
