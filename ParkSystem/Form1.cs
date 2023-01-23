@@ -52,15 +52,15 @@ namespace ParkSystem
                 MessageBox.Show("Sie haben die falsche ticket nummer eingegeben");
                 return;
             }
-            if (new TimeSpan(Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[0]), Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[1]), 0) < plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].beleget_seit)
+            if (new TimeSpan(Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[0]), Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[1]), 0) < plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].beleget_seit || new TimeSpan(Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[0]), Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[1]), 0) == plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].beleget_seit)
             {
-                MessageBox.Show("Error, selected time is earlier then the booking time");
+                MessageBox.Show("Error, selected time is earlier or the same then the booking time");
                 return;
             }
 
             TimeSpan ts = new TimeSpan(Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[0]), Convert.ToInt32(uhrzeit_cmb.SelectedItem.ToString().Split(':')[1]), 0) - plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].beleget_seit;
             int mins = Convert.ToInt32(ts.TotalMinutes) / 30;
-            amount_to_pay_lbl.Text = (mins*2).ToString();
+            amount_to_pay_lbl.Text = (mins*2).ToString()+"€";
             plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].belegt = false;
             setNUP_frei_und_belegt();
 

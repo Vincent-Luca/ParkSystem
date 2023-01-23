@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.uhrzeit_cmb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(333, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 368);
             this.panel1.TabIndex = 0;
@@ -78,7 +78,7 @@
             this.belegte_park_NUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.belegte_park_NUD.InterceptArrowKeys = false;
             this.belegte_park_NUD.Location = new System.Drawing.Point(178, 139);
-            this.belegte_park_NUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.belegte_park_NUD.Margin = new System.Windows.Forms.Padding(2);
             this.belegte_park_NUD.Name = "belegte_park_NUD";
             this.belegte_park_NUD.ReadOnly = true;
             this.belegte_park_NUD.Size = new System.Drawing.Size(121, 20);
@@ -90,7 +90,7 @@
             this.freie_park_NUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.freie_park_NUD.InterceptArrowKeys = false;
             this.freie_park_NUD.Location = new System.Drawing.Point(38, 139);
-            this.freie_park_NUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.freie_park_NUD.Margin = new System.Windows.Forms.Padding(2);
             this.freie_park_NUD.Name = "freie_park_NUD";
             this.freie_park_NUD.ReadOnly = true;
             this.freie_park_NUD.Size = new System.Drawing.Size(111, 20);
@@ -164,7 +164,7 @@
             "19:30",
             "20:00"});
             this.uhrzeit_cmb.Location = new System.Drawing.Point(208, 57);
-            this.uhrzeit_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uhrzeit_cmb.Margin = new System.Windows.Forms.Padding(2);
             this.uhrzeit_cmb.Name = "uhrzeit_cmb";
             this.uhrzeit_cmb.Size = new System.Drawing.Size(92, 21);
             this.uhrzeit_cmb.TabIndex = 1;
@@ -197,7 +197,7 @@
             // 
             this.ticket_nr_NUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ticket_nr_NUD.Location = new System.Drawing.Point(9, 288);
-            this.ticket_nr_NUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ticket_nr_NUD.Margin = new System.Windows.Forms.Padding(2);
             this.ticket_nr_NUD.Minimum = new decimal(new int[] {
             1,
             0,
@@ -216,7 +216,7 @@
             // 
             this.ticket_ziehen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticket_ziehen_btn.Location = new System.Drawing.Point(8, 49);
-            this.ticket_ziehen_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ticket_ziehen_btn.Margin = new System.Windows.Forms.Padding(2);
             this.ticket_ziehen_btn.Name = "ticket_ziehen_btn";
             this.ticket_ziehen_btn.Size = new System.Drawing.Size(109, 68);
             this.ticket_ziehen_btn.TabIndex = 4;
@@ -261,7 +261,7 @@
             this.bezahlen_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bezahlen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bezahlen_btn.Location = new System.Drawing.Point(9, 310);
-            this.bezahlen_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bezahlen_btn.Margin = new System.Windows.Forms.Padding(2);
             this.bezahlen_btn.Name = "bezahlen_btn";
             this.bezahlen_btn.Size = new System.Drawing.Size(109, 29);
             this.bezahlen_btn.TabIndex = 8;
@@ -312,7 +312,7 @@
             this.Controls.Add(this.ticket_nr_NUD);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(657, 405);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
