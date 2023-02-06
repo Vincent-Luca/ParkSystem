@@ -47,6 +47,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.amount_to_pay_lbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_Statistik = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.belegte_park_NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freie_park_NUD)).BeginInit();
@@ -59,6 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_Statistik);
             this.panel1.Controls.Add(this.belegte_park_NUD);
             this.panel1.Controls.Add(this.freie_park_NUD);
             this.panel1.Controls.Add(this.label8);
@@ -297,6 +299,17 @@
             this.timer1.Interval = 6000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btn_Statistik
+            // 
+            this.btn_Statistik.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Statistik.Location = new System.Drawing.Point(178, 238);
+            this.btn_Statistik.Name = "btn_Statistik";
+            this.btn_Statistik.Size = new System.Drawing.Size(122, 47);
+            this.btn_Statistik.TabIndex = 18;
+            this.btn_Statistik.Text = "Statistik";
+            this.btn_Statistik.UseVisualStyleBackColor = true;
+            this.btn_Statistik.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +360,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown belegte_park_NUD;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_Statistik;
     }
 }
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using ParkSystem.Forms;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ParkSystem.Klassen;
@@ -13,7 +14,7 @@ namespace ParkSystem
 {
     public partial class Form1 : Form
     {
-
+        private DBVerbindung Databank;
         private Parkplatz[] plaetze = new Parkplatz[100];
 
         public Form1()
@@ -21,7 +22,7 @@ namespace ParkSystem
             InitializeComponent();
             Fillplaetze();
             setNUP_frei_und_belegt();
-
+            Databank = new DBVerbindung("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Parkhaus.mdb");
             uhrzeit_cmb.SelectedIndex = 0;
         }
 
@@ -63,6 +64,12 @@ namespace ParkSystem
             amount_to_pay_lbl.Text = (mins*2).ToString()+"€";
             plaetze[Convert.ToInt32(ticket_nr_NUD.Value)].belegt = false;
             setNUP_frei_und_belegt();
+            Dictionary<string,dynamic> dict = new Dictionary<string, dynamic> 
+            {
+                {"@PD",ts },
+                {"@preis",mins*2}
+            };
+            Databank.executenonquery("Insert into Auto(Parkdauer,Preis) Values(@PD,@preis);",dict);
 
             bezahlen_btn.Enabled = false;
         }
@@ -88,6 +95,12 @@ namespace ParkSystem
             amount_to_pay_lbl.Text = "";
             bezahlen_btn.Enabled = true;
             ticket_ziehen_btn.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            statistik s = new statistik(Databank);
+            s.Show();
         }
     }
 }
