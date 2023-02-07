@@ -22,7 +22,7 @@ namespace ParkSystem
             InitializeComponent();
             Fillplaetze();
             setNUP_frei_und_belegt();
-            Databank = new DBVerbindung("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Parkhaus.mdb");
+            Databank = new DBVerbindung("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\gaimn\\Documents\\ParkSystem\\ParkSystem\\Parkhaus.mdb");
             uhrzeit_cmb.SelectedIndex = 0;
         }
 
